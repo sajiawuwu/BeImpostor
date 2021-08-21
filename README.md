@@ -3,7 +3,7 @@
 [![Discord](https://img.shields.io/badge/Discord-chat-blue?style=flat-square)](https://discord.gg/Mk3w6Tb)
 [![AppVeyor](https://img.shields.io/appveyor/build/Impostor/Impostor/master?style=flat-square)](https://ci.appveyor.com/project/Impostor/Impostor/branch/master)
 
-BeAImpostor 是在我们中间工作的私人服务器的升级，用 C# 编写。.
+BeImpostor 是在我们中间工作的私人服务器的升级，用 C# 编写。.
 
 由于我们正在积极更新，如果您想玩 BeImpostor 支持的最新版本的我们，您可能需要使用 master 分支的最新版本。.
 
