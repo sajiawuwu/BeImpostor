@@ -1,15 +1,7 @@
-# Frequently Answered Questions
+# 常见问题解答
 
-## What is this?
+## 我该如何开始?
 
-The Impostor project is a reverse engineered and open source server for the game Among Us. The game itself is developed by [Innersloth](http://www.innersloth.com/) while this project is maintained by the community. This project was built out of frustration for the lack of server availability in certain regions and the inability for the core developer, [AeonLucid](https://github.com/AeonLucid), to join a public game. As of this time, it has not been officially endorsed by the studio.
+运行服务器和客户端设置以帮助您的朋友加入的更多信息，请参阅运行服务器
 
-## Can this be used with the mobile version of the game?
-
-Yes, Impostor can be used with both the Android and iOS versions of the game. You can add a custom server via a link, you can do this using the [site](https://impostor.github.io/Impostor)
-
-## How can I get started?
-
-See [Setting up your Server](Running-the-server.md) for more information on running the server and [Client Setup](https://impostor.github.io/Impostor/) for helping your friends join in!
-
-If you're having issues with the server software, check the [Troubleshooting page](TROUBLESHOOTING.md).
+如果您在使用服务器软件时遇到问题，请查看故障排除页面。
