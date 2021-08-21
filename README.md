@@ -7,7 +7,7 @@ BeImpostor 是在我们中间工作的私人服务器的升级，用 C# 编写�
 
 由于我们正在积极更新，如果您想玩 BeImpostor 支持的最新版本的我们，您可能需要使用 master 分支的最新版本。.
 
-如果您想玩旧版本的《among us》，您可以从 [here](https://github.com/Impostor/Impostor/releases/), 下载旧版本，但这些版本的支持较少。
+如果您想玩旧版本的《among us》，您可以从 [这里](https://github.com/Impostor/Impostor/releases/), 下载旧版本，但这些版本的支持较少。
 ## 支持特性
 
 - 我们之间的所有功能都已实现。它是官方服务器的完全替代品.
@@ -21,11 +21,11 @@ BeImpostor 是在我们中间工作的私人服务器的升级，用 C# 编写�
 
 ### 服务器
 
-请使用 [docs](docs/Running-the-server.md) 技术文档.
+请使用 [技术文档](docs/Running-the-server.md) .
 
 ## 贡献
 
-感谢[docs](https://github.com/js6pak)提供Impostor源码 
+感谢[js6pak](https://github.com/js6pak)提供Impostor源码 
 
 
 ## 开源协议
