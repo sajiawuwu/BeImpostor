@@ -1,102 +1,15 @@
-# Running the server
+# 运行服务器
 
-There are currently two modes to run the Impostor server. The first way, Single Server, is the simplest one, can handle up to a few hundred simultaneous players, and is the one you should probably use. Multi-Server mode will distribute players across other servers and is intended for advanced users.
+目前有两种模式可以运行 BeImpostor 服务器。第一种方式，单服务器，是最简单的方式，最多可以同时处理几百个玩家，也是您可能应该使用的方式。多服务器模式将玩家分布在其他服务器上，适用于高级用户。
 
-## Single server
+## 单台服务器
 
-### Without Docker
+### 不适用 Docker
 
-1. Install the [.NET 5.0 runtime](https://dotnet.microsoft.com/download). Installing the SDK also works, but is not necessary unless you plan on developing Impostor or Impostor plugins. If you're asked to pick between a console, desktop or server runtime, the console runtime is enough.
-2. Find the [latest release](https://github.com/Impostor/Impostor/releases) or the [latest CI build](https://ci.appveyor.com/project/Impostor/Impostor/branch/master/artifacts).
-3. Download the version for your OS (linux/win/osx). Impostor is built for multiple CPU-architectures, you most likely want the x64 version, unless you are running on a Raspberry Pi or another device with an ARM processor.
-4. Extract the zip.
-5. Modify `config.json` to your liking. Documentation can be found [here](Server-configuration.md) *(this step is mandatory if you want to expose this server to other devices)*
-6. Run `Impostor.Server` (Linux/macOS) or `Impostor.Server.exe` (Windows)
+1. 安装.[.NET 5.0 runtime](https://dotnet.microsoft.com/download). 运行安装 SDK 也可以，但不是必需的，除非您计划开发 BeImpostor 或 Impostor 插件。如果要求您在控制台、桌面或服务器运行时之间进行选择，控制台运行时就足够了。
+2. 下载最新版本
+3. 下载适用于您的操作系统 (linux/win/osx) 的版本。BE Impostor 是多线程的，您很可能需要 x64 版本，除非您在 Raspberry Pi 或其他带有 ARM 处理器的设备上运行。
+4. 解压.
+5. config.json根据自己的喜好修改。
+6. 运行Impostor.Server(Linux/macOS) 或Impostor.Server.exe(Windows)
 
-### Using Docker
-
-[![Docker Image](https://img.shields.io/docker/v/aeonlucid/impostor?sort=semver)](https://hub.docker.com/r/aeonlucid/impostor)
-[![Docker Image](https://img.shields.io/docker/v/aeonlucid/impostor/nightly)](https://hub.docker.com/r/aeonlucid/impostor)
-
-After installing Docker, you can just start a Docker container with `docker run`:
-
-```
-docker run -p 22023:22023/udp aeonlucid/impostor:nightly
-```
-
-### Using Docker Compose
-
-```
-version: '3.4'
-
-services:
-  impostor:
-    image: aeonlucid/impostor:nightly
-    container_name: impostor
-    ports:
-      - 22023:22023/udp
-    volumes:
-      - /path/to/local/config.json:/app/config.json # For easy editing of the config
-      - /path/to/local/plugins:/app/plugins         # Only needed if using plugins
-      - /path/to/local/libraries:/app/libraries     # Only needed if using external libraries
-```
-
-## Multiple servers
-
-Follow the steps from the single server on two or more servers. You should only need to set this up if you have a very large server and can no longer fit everyone on one server: if this is your first time installing Impostor, use a single server.
-
-### Master server
-
-The master server will accept client connections and redirect them to the other servers listed in the configuration. It will not host any games itself.
-
-Example configuration:
-
-```json
-{
-  "Server": {
-    "PublicIp": "127.0.0.1",
-    "PublicPort": 22023,
-    "ListenIp": "0.0.0.0",
-    "ListenPort": 22023
-  },
-  "ServerRedirector": {
-    "Enabled": true,
-    "Master": true,
-    "Locator": {
-      "Redis": "",
-      "UdpMasterEndpoint": "127.0.0.1:22024"
-    },
-    "Nodes": [
-      {
-        "Ip": "127.0.0.1",
-        "Port": 22025
-      }
-    ]
-  }
-}
-```
-
-### Node servers
-
-The node server should have `ServerRedirector` enabled too, but `Master` **must be disabled**. Nodes do not need to be aware of each other.
-
-Example configuration:
-
-```json
-{
-  "Server": {
-    "PublicIp": "127.0.0.1",
-    "PublicPort": 22025,
-    "ListenIp": "0.0.0.0",
-    "ListenPort": 22025
-  },
-  "ServerRedirector": {
-    "Enabled": true,
-    "Master": false,
-    "Locator": {
-      "Redis": "",
-      "UdpMasterEndpoint": "127.0.0.1:22024"
-    }
-  }
-}
-```
