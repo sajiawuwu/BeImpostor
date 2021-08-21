@@ -1,4 +1,4 @@
-# BEimpostor
+# BEImpostor
 
 [![Discord](https://img.shields.io/badge/Discord-chat-blue?style=flat-square)](https://discord.gg/Mk3w6Tb)
 [![AppVeyor](https://img.shields.io/appveyor/build/Impostor/Impostor/master?style=flat-square)](https://ci.appveyor.com/project/Impostor/Impostor/branch/master)
