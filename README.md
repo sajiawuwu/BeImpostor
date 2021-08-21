@@ -5,7 +5,7 @@
 
 BeImpostor 是在我们中间工作的私人服务器的升级，用 C# 编写。.
 
-由于我们正在积极更新，如果您想玩 BeImpostor 支持的最新版本的我们，您可能需要使用 master 分支的最新版本。.
+由于我们正在积极更新，如果您想玩 BeImpostor 支持的最新版本您可能需要使用 master 分支的最新版本。.
 
 如果您想玩最新版本的《among us》，您可以从 [这里](https://github.com/laoli233333/BeImpostor/releases), 下载。
 如果您想玩旧版本的《among us》，您可以从 [这里](https://github.com/Impostor/Impostor), 下载。
