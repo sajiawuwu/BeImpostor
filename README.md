@@ -1,7 +1,8 @@
 # BEImpostor
 
-[![Discord](https://img.shields.io/badge/%E5%BC%80%E9%BB%91%E6%8B%89-go-green)](https://kaihei.co/vjx3yl)
-[![AppVeyor](https://img.shields.io/appveyor/build/Impostor/Impostor/master?style=flat-square)]()
+[![kaiheila](https://img.shields.io/badge/%E5%BC%80%E9%BB%91%E6%8B%89-go-green)](https://kaihei.co/vjx3yl)
+[![bilibili](https://img.shields.io/badge/bilibili-%E6%9D%8E-blue)](https://space.bilibili.com/31524143/)
+[![antian](https://img.shields.io/badge/bilibili-%E5%B2%B8%E5%A4%A9-red)](https://space.bilibili.com/750012)
 
 BeImpostor 是在我们中间工作的私人服务器的升级，用 C# 编写。.
 
