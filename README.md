@@ -1,6 +1,6 @@
 # BEImpostor
 
-[![Discord](https://img.shields.io/badge/Discord-chat-blue?style=flat-square)](https://kaihei.co/vjx3yl)
+[![Discord](https://img.shields.io/badge/%E5%BC%80%E9%BB%91%E6%8B%89-go-green)](https://kaihei.co/vjx3yl)
 [![AppVeyor](https://img.shields.io/appveyor/build/Impostor/Impostor/master?style=flat-square)]()
 
 BeImpostor 是在我们中间工作的私人服务器的升级，用 C# 编写。.
